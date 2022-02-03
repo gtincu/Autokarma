@@ -1,9 +1,10 @@
-package tests;
+package tests.tests;
 
 import base.SharedData;
 import help.ElementMethods;
 import org.junit.Test;
 import pages.*;
+import pages.onlyValidatePages.*;
 
 public class CatalogPieseAutoButtonTest extends SharedData {
 
@@ -16,7 +17,7 @@ public class CatalogPieseAutoButtonTest extends SharedData {
     public PieseAgricolePage pieseAgricolePage;
 
     @Test
-    public void TestAutomat1() {
+    public void catalogPieseTest() {
         elementMethods = new ElementMethods(driver);
         indexPage = new IndexPage(driver);
         pieseAutomobilePage = new PieseAutomobilePage(driver);

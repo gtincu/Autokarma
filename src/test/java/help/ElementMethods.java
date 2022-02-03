@@ -1,5 +1,6 @@
 package help;
 
+import org.apache.commons.exec.util.StringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -44,7 +45,7 @@ public class ElementMethods {
 
     public void scrollDown() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("window.scrollBy(0,200)");
+        jse.executeScript("window.scrollBy(0,1000)");
     }
 
     public void wait(int miliseconds){
@@ -54,5 +55,12 @@ public class ElementMethods {
             e.printStackTrace();
         }
     }
+
+
+
+    public String getText(WebElement element){
+        return element.getText();
+    }
+
 
 }

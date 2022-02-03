@@ -1,9 +1,10 @@
-package tests;
+package tests.tests;
 
 import base.SharedData;
 import help.ElementMethods;
 import org.junit.Test;
 import pages.*;
+import pages.onlyValidatePages.*;
 
 public class ListaClaseAutovehiculeTest extends SharedData {
     public IndexPage indexPage;

@@ -1,4 +1,4 @@
-package tests;
+package tests.tests;
 
 import base.SharedData;
 import org.junit.Test;

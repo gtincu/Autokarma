@@ -25,13 +25,13 @@ public class IndexPage {
     private WebElement acceptCookiesButton;
     @FindBy (xpath = "//span[contains(text(),'Universale')]")
     private WebElement universaleElement;
-    @FindBy(xpath = "//*[@id='bs-megamenu']/ul/li[4]/div/div/div/div/div/ul/li[1]/a")
+    @FindBy(xpath = "//*[@id='bs-megamenu']/ul/li[4]/div/div/div/div/div/ul/li/a")
     private List<WebElement> universaleList;
 
 
     public void clickCatalogPieseAuto() {
         acceptCookiesButton.click();
-        catalogPieseAutoElement.click();
+        elementMethods.clickElement(catalogPieseAutoElement);
         elementMethods.validateTitleElement("AutoKarma Group - Catalog piese auto - autoturisme, autoutilitare, motociclete, autobuze, camioane, utilaje agricole");
 
     }
@@ -46,9 +46,10 @@ public class IndexPage {
     }
 
 
-    public void clickUniversaleButtonAndValidate(){
+    public void clickUniversaleButton(){
+        acceptCookiesButton.click();
         elementMethods.clickElement(universaleElement);
-        elementMethods.validateTitleElement("Autokarma - Catalog piese universale ");
+
     }
 
 }

@@ -1,4 +1,4 @@
-package pages;
+package pages.onlyValidatePages;
 
 import help.ElementMethods;
 import org.openqa.selenium.WebDriver;

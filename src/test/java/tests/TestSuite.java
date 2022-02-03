@@ -2,6 +2,7 @@ package tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import tests.tests.*;
 
 @RunWith(Suite.class)
 
@@ -9,7 +10,8 @@ import org.junit.runners.Suite;
         CatalogPieseAutoButtonTest.class,
         AlegeMasinaTest.class,
         ListaClaseAutovehiculeTest.class,
-        UniversaleButtonTest.class
+        UniversaleButtonTest.class,
+        AdaugaInCosSiValideazaPretTest.class
 })
 
 public class TestSuite {
