@@ -38,14 +38,13 @@ public class ElementMethods {
     }
 
     public void fillAlegeMasinaElement(WebElement element, String value) {
-        waitVisibleElement(element);
         element.sendKeys(value);
         wait(300);
     }
 
     public void scrollDown() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("window.scrollBy(0,1000)");
+        jse.executeScript("window.scrollBy(0,700)");
     }
 
     public void wait(int miliseconds){
@@ -54,6 +53,10 @@ public class ElementMethods {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void fillElement(WebElement element, String value){
+        element.sendKeys(value);
     }
 
 

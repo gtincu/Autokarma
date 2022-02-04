@@ -1,7 +1,6 @@
 package tests.tests;
 
 import base.Hooks;
-import base.SharedData;
 import org.junit.Test;
 import pages.CatalogPieseAutoPage;
 import pages.IndexPage;
@@ -28,5 +27,6 @@ public class AlegeMasinaTest extends Hooks {
         indexPage.clickCatalogPieseAuto();
         catalogPieseAutoPage.fillAlegeMasinaElement(inputData.get("clasaKey2"),inputData.get( "marcaKey2"), inputData.get("grupaKey2"), inputData.get("modelKey2"), inputData.get("motorKey2"));
         catalogPieseAutoPage.clickStergeMasina();
+
     }
 }

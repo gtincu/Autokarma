@@ -1,16 +1,16 @@
 package tests.tests;
 
 import base.Hooks;
-import base.SharedData;
 import help.ElementMethods;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 import pages.CosProdusePage;
 import pages.IndexPage;
 import pages.UleiMotorPage;
 import pages.UniversalePage;
 
-public class AdaugaInCosSiValideazaPretTest extends Hooks {
+public class ValidarePretLogatTest extends Hooks {
     public IndexPage indexPage;
     public UleiMotorPage uleiMotorPage;
     public UniversalePage universalePage;
@@ -19,7 +19,8 @@ public class AdaugaInCosSiValideazaPretTest extends Hooks {
 
 
     @Test
-    public void adaugaInCosTest() {
+
+    public void validarePretLogat(){
         indexPage = new IndexPage(driver);
         uleiMotorPage = new UleiMotorPage(driver);
         universalePage = new UniversalePage(driver);
@@ -36,31 +37,14 @@ public class AdaugaInCosSiValideazaPretTest extends Hooks {
         uleiMotorPage.selecteazaUleiuri(inputData.get("tipKey"));
         uleiMotorPage.selecteazaUleiuri(inputData.get("vascozitateKey"));
         uleiMotorPage.selecteazaUleiuri(inputData.get("capacitateKey"));
-        uleiMotorPage.clickAdaugaInCosButton();
-        uleiMotorPage.validatePrice();
-    }
-
-    @Test
-    public void valideazaPretCosTest(){
-        indexPage = new IndexPage(driver);
-        uleiMotorPage = new UleiMotorPage(driver);
-        universalePage = new UniversalePage(driver);
-        elementMethods = new ElementMethods(driver);
-        cosProdusePage = new CosProdusePage(driver);
-
-
-        indexPage.clickUniversaleButton();
-        universalePage.validateTitle();
-
-        indexPage.clickUniversaleList(0);
-        uleiMotorPage.validateTitle();
-
-        uleiMotorPage.selecteazaUleiuri(inputData.get("producatorKey2"));
-        uleiMotorPage.selecteazaUleiuri(inputData.get("tipKey2"));
-        uleiMotorPage.selecteazaUleiuri(inputData.get("vascozitateKey2"));
-        uleiMotorPage.selecteazaUleiuri(inputData.get("capacitateKey2"));
         String pretListaText = uleiMotorPage.getPretLista();
         uleiMotorPage.clickVeziCosProduseElement();
+        cosProdusePage.clickContinuareFinalizareButton();
+        cosProdusePage.fillCredentialeLogin(inputData);
+        cosProdusePage.clickAutentificareButton();
         Assert.assertTrue(pretListaText.contains(cosProdusePage.getPretTotalLogat()));
+
     }
+
+
 }
