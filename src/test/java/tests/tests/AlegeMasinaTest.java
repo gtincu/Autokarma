@@ -1,11 +1,12 @@
 package tests.tests;
 
+import base.Hooks;
 import base.SharedData;
 import org.junit.Test;
 import pages.CatalogPieseAutoPage;
 import pages.IndexPage;
 
-public class AlegeMasinaTest extends SharedData {
+public class AlegeMasinaTest extends Hooks {
     public IndexPage indexPage;
     public CatalogPieseAutoPage catalogPieseAutoPage;
 
@@ -15,7 +16,7 @@ public class AlegeMasinaTest extends SharedData {
         catalogPieseAutoPage = new CatalogPieseAutoPage(driver);
 
         indexPage.clickCatalogPieseAuto();
-        catalogPieseAutoPage.fillAlegeMasinaElement("Automobile\n", "Honda\n", "Accord\n", "Accord\n", "1.6\n");
+        catalogPieseAutoPage.fillAlegeMasinaElement(inputData.get("clasaKey"), inputData.get("marcaKey"), inputData.get("grupaKey"), inputData.get("modelKey"), inputData.get("motorKey"));
         catalogPieseAutoPage.clickCautaMasina();
     }
 
@@ -25,7 +26,7 @@ public class AlegeMasinaTest extends SharedData {
         catalogPieseAutoPage = new CatalogPieseAutoPage(driver);
 
         indexPage.clickCatalogPieseAuto();
-        catalogPieseAutoPage.fillAlegeMasinaElement("Motociclete\n", "Ducati\n", "Superleggera\n", "Superleggera\n", "1299\n");
+        catalogPieseAutoPage.fillAlegeMasinaElement(inputData.get("clasaKey2"),inputData.get( "marcaKey2"), inputData.get("grupaKey2"), inputData.get("modelKey2"), inputData.get("motorKey2"));
         catalogPieseAutoPage.clickStergeMasina();
     }
 }

@@ -1,12 +1,13 @@
 package tests.tests;
 
+import base.Hooks;
 import base.SharedData;
 import help.ElementMethods;
 import org.junit.Test;
 import pages.*;
 import pages.onlyValidatePages.*;
 
-public class ListaClaseAutovehiculeTest extends SharedData {
+public class ListaClaseAutovehiculeTest extends Hooks {
     public IndexPage indexPage;
     public ElementMethods elementMethods;
     public CatalogPieseAutoPage catalogPieseAutoPage;

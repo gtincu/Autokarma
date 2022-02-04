@@ -1,12 +1,13 @@
 package tests.tests;
 
+import base.Hooks;
 import base.SharedData;
 import help.ElementMethods;
 import org.junit.Test;
 import pages.*;
 import pages.onlyValidatePages.*;
 
-public class CatalogPieseAutoButtonTest extends SharedData {
+public class CatalogPieseAutoButtonTest extends Hooks {
 
     public ElementMethods elementMethods;
     public IndexPage indexPage;

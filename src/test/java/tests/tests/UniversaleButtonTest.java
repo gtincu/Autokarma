@@ -1,5 +1,6 @@
 package tests.tests;
 
+import base.Hooks;
 import base.SharedData;
 import help.ElementMethods;
 import org.junit.Test;
@@ -8,7 +9,7 @@ import pages.onlyValidatePages.AntigelPage;
 import pages.IndexPage;
 import pages.UleiMotorPage;
 
-public class UniversaleButtonTest extends SharedData {
+public class UniversaleButtonTest extends Hooks {
 
     public IndexPage indexPage;
     public ElementMethods elementMethods;

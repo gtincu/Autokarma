@@ -1,5 +1,6 @@
 package tests.tests;
 
+import base.Hooks;
 import base.SharedData;
 import help.ElementMethods;
 import org.junit.Assert;
@@ -9,7 +10,7 @@ import pages.IndexPage;
 import pages.UleiMotorPage;
 import pages.UniversalePage;
 
-public class AdaugaInCosSiValideazaPretTest extends SharedData {
+public class AdaugaInCosSiValideazaPretTest extends Hooks {
     public IndexPage indexPage;
     public UleiMotorPage uleiMotorPage;
     public UniversalePage universalePage;
@@ -31,10 +32,10 @@ public class AdaugaInCosSiValideazaPretTest extends SharedData {
         indexPage.clickUniversaleList(0);
         uleiMotorPage.validateTitle();
 
-        uleiMotorPage.selecteazaUleiuri("Castrol");
-        uleiMotorPage.selecteazaUleiuri("Pompe Duze");
-        uleiMotorPage.selecteazaUleiuri("5w40");
-        uleiMotorPage.selecteazaUleiuri("4 Litri");
+        uleiMotorPage.selecteazaUleiuri(inputData.get("producatorKey"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("tipKey"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("vascozitateKey"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("capacitateKey"));
         uleiMotorPage.clickAdaugaInCosButton();
         uleiMotorPage.validatePrice();
     }
@@ -54,10 +55,10 @@ public class AdaugaInCosSiValideazaPretTest extends SharedData {
         indexPage.clickUniversaleList(0);
         uleiMotorPage.validateTitle();
 
-        uleiMotorPage.selecteazaUleiuri("Aral");
-        uleiMotorPage.selecteazaUleiuri("Pompe Duze");
-        uleiMotorPage.selecteazaUleiuri("5w40");
-        uleiMotorPage.selecteazaUleiuri("4 Litri");
+        uleiMotorPage.selecteazaUleiuri(inputData.get("producatorKey2"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("tipKey2"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("vascozitateKey2"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("capacitateKey2"));
         String pretListaText = uleiMotorPage.getPretLista();
         uleiMotorPage.clickVeziCosProduseElement();
         Assert.assertTrue(pretListaText.contains(cosProdusePage.getPretTotal()));
