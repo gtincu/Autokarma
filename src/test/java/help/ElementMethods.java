@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.IndexPage;
 
 import java.time.Duration;
 
@@ -46,6 +47,12 @@ public class ElementMethods {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,700)");
     }
+
+    public void scrollByPixel(Integer x, Integer y) {
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy("+x+","+y+")");
+    }
+
 
     public void wait(int miliseconds){
         try {

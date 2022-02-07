@@ -2,6 +2,7 @@ package tests.tests;
 
 import base.Hooks;
 import base.SharedData;
+import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Test;
 import pages.*;
@@ -38,6 +39,7 @@ public class CatalogPieseAutoButtonTest extends Hooks {
         pieseCamioanePage.validateTitle();
         indexPage.clickCatalogPieseAutoList(4);
         pieseAgricolePage.validateTitle();
+        report.logger.log(Status.PASS,"Buton si Lista hover");
 
     }
 }

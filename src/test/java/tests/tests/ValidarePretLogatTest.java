@@ -1,6 +1,7 @@
 package tests.tests;
 
 import base.Hooks;
+import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Assert;
 import org.junit.Test;
@@ -43,6 +44,7 @@ public class ValidarePretLogatTest extends Hooks {
         cosProdusePage.fillCredentialeLogin(inputData);
         cosProdusePage.clickAutentificareButton();
         Assert.assertTrue(pretListaText.contains(cosProdusePage.getPretTotalLogat()));
+        report.logger.log(Status.PASS,"Adaugare in cos si validare pret dupa logare");
 
     }
 

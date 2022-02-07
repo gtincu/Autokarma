@@ -2,6 +2,7 @@ package tests.tests;
 
 import base.Hooks;
 import base.SharedData;
+import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Assert;
 import org.junit.Test;
@@ -61,6 +62,7 @@ public class AdaugaInCosSiValideazaPretTest extends Hooks {
         uleiMotorPage.selecteazaUleiuri(inputData.get("capacitateKey2"));
         String pretListaText = uleiMotorPage.getPretLista();
         uleiMotorPage.clickVeziCosProduseElement();
-        Assert.assertTrue(pretListaText.contains(cosProdusePage.getPretTotalLogat()));
+        Assert.assertTrue(pretListaText.contains(cosProdusePage.getPretTotal()));
+        report.logger.log(Status.PASS,"Selectare produs, adaugare in cos si validare pret nelogat");
     }
 }

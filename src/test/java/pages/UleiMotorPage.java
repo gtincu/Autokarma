@@ -72,7 +72,7 @@ public class UleiMotorPage {
 
     public void clickAdaugaInCosButton() {
         elementMethods.clickElement(aplicaButton);
-        elementMethods.scrollDown();
+        elementMethods.scrollByPixel(0,700);
         elementMethods.clickElement(adaugaInCosElement);
         elementMethods.wait(300);
     }
@@ -95,11 +95,11 @@ public class UleiMotorPage {
     }
 
         public String getPretLista() {
-        elementMethods.clickElement(aplicaButton);
-        elementMethods.scrollDown();
-        String x = pretListaElement.getText();
-//        elementMethods.wait(300);
-        elementMethods.clickElement(adaugaInCosElement);
+            elementMethods.clickElement(aplicaButton);
+            elementMethods.scrollByPixel(0,2000);
+
+            String x = pretListaElement.getText();
+            elementMethods.clickElement(adaugaInCosElement);
         return x;
     }
 

@@ -37,7 +37,7 @@ public class CatalogPieseAutoPage {
 
 
     public void fillAlegeMasinaElement(String clasa, String marca, String grupa, String model, String motor) {
-        elementMethods.scrollDown();
+        elementMethods.scrollByPixel(0,500);
         elementMethods.fillAlegeMasinaElement(clasaElement, clasa);
         elementMethods.fillAlegeMasinaElement(marcaElement, marca);
         elementMethods.fillAlegeMasinaElement(grupaElement, grupa);

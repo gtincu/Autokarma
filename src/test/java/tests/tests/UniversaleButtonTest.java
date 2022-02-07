@@ -2,6 +2,7 @@ package tests.tests;
 
 import base.Hooks;
 import base.SharedData;
+import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Test;
 import pages.UniversalePage;
@@ -35,6 +36,7 @@ public class UniversaleButtonTest extends Hooks {
         antigelPage.validateTitle();
         indexPage.clickUniversaleList(11);
         universalePage.validateTitle();
+        report.logger.log(Status.PASS,"Verificare buton si lista hover");
 
 
 

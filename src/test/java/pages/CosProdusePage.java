@@ -38,16 +38,17 @@ public class CosProdusePage {
     }
 
     public String getPretTotalLogat(){
+        elementMethods.scrollByPixel(0,500);
         return pretTotalLogatElement.getText();
     }
 
     public void clickContinuareFinalizareButton(){
-        elementMethods.scrollDown();
+        elementMethods.scrollByPixel(0,500);
         continuareFinalizareELement.click();
     }
 
     public void clickAutentificareButton(){
-        elementMethods.scrollDown();
+        elementMethods.scrollByPixel(0,500);
         autentificareElement.click();
     }
 

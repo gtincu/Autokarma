@@ -2,6 +2,7 @@ package tests.tests;
 
 import base.Hooks;
 import base.SharedData;
+import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Test;
 import pages.*;
@@ -41,6 +42,7 @@ public class ListaClaseAutovehiculeTest extends Hooks {
         pieseCamioanePage.validateTitleAndGoBack();
         catalogPieseAutoPage.clickListaClaseAutovehiculeList(4);
         pieseAgricolePage.validateTitleAndGoBack();
+        report.logger.log(Status.PASS,"Accesare si validare pagini lista dreapta");
 
 
     }
