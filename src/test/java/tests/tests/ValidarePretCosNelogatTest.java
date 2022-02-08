@@ -1,7 +1,6 @@
 package tests.tests;
 
 import base.Hooks;
-import base.SharedData;
 import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Assert;
@@ -9,7 +8,7 @@ import org.junit.Test;
 import pages.CosProdusePage;
 import pages.IndexPage;
 import pages.UleiMotorPage;
-import pages.UniversalePage;
+import pages.onlyValidatePages.UniversalePage;
 
 public class AdaugaInCosSiValideazaPretTest extends Hooks {
     public IndexPage indexPage;

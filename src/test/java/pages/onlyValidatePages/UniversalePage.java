@@ -6,14 +6,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UniversalePage {
         public WebDriver driver;
-        public IndexPage indexPage;
+//        public IndexPage indexPage;
         public ElementMethods elementMethods;
 
 
 
         public UniversalePage(WebDriver driver){
                 this.driver = driver;
-                this.indexPage=new IndexPage(driver);
+//                this.indexPage=new IndexPage(driver);
                 this.elementMethods= new ElementMethods(driver);
                 PageFactory.initElements(driver, this);
         }

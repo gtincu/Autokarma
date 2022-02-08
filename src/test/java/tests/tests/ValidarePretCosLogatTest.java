@@ -5,11 +5,10 @@ import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import pages.CosProdusePage;
 import pages.IndexPage;
 import pages.UleiMotorPage;
-import pages.UniversalePage;
+import pages.onlyValidatePages.UniversalePage;
 
 public class ValidarePretLogatTest extends Hooks {
     public IndexPage indexPage;
