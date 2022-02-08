@@ -1,20 +1,14 @@
 package pages;
 
-import help.ElementMethods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
-public class IndexPage {
-    public WebDriver driver;
-    public ElementMethods elementMethods;
+public class IndexPage extends BasePage {
 
-    public IndexPage(WebDriver driver) {
-        this.driver = driver;
-        this.elementMethods = new ElementMethods(driver);
-        PageFactory.initElements(driver, this);
+    public IndexPage(WebDriver driver){
+        super(driver);
     }
 
     @FindBy(xpath = "//a[@href='catalog-piese-auto']")

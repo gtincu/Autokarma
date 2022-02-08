@@ -10,7 +10,7 @@ import pages.IndexPage;
 import pages.UleiMotorPage;
 import pages.onlyValidatePages.UniversalePage;
 
-public class AdaugaInCosSiValideazaPretTest extends Hooks {
+public class ValidarePretCosNelogatTest extends Hooks {
     public IndexPage indexPage;
     public UleiMotorPage uleiMotorPage;
     public UniversalePage universalePage;
@@ -18,7 +18,7 @@ public class AdaugaInCosSiValideazaPretTest extends Hooks {
     public CosProdusePage cosProdusePage;
 
 
-    @Test
+    //@Test
     public void adaugaInCosTest() {
         indexPage = new IndexPage(driver);
         uleiMotorPage = new UleiMotorPage(driver);
@@ -55,13 +55,13 @@ public class AdaugaInCosSiValideazaPretTest extends Hooks {
         indexPage.clickUniversaleList(0);
         uleiMotorPage.validateTitle();
 
-        uleiMotorPage.selecteazaUleiuri(inputData.get("producatorKey2"));
-        uleiMotorPage.selecteazaUleiuri(inputData.get("tipKey2"));
-        uleiMotorPage.selecteazaUleiuri(inputData.get("vascozitateKey2"));
-        uleiMotorPage.selecteazaUleiuri(inputData.get("capacitateKey2"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("producatorKey"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("tipKey"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("vascozitateKey"));
+        uleiMotorPage.selecteazaUleiuri(inputData.get("capacitateKey"));
         String pretListaText = uleiMotorPage.getPretLista();
         uleiMotorPage.clickVeziCosProduseElement();
-        Assert.assertTrue(pretListaText.contains(cosProdusePage.getPretTotal()));
+        Assert.assertTrue(pretListaText.contains(cosProdusePage.getPretTotalNelogat()));
         report.logger.log(Status.PASS,"Selectare produs, adaugare in cos si validare pret nelogat");
     }
 }

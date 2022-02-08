@@ -11,8 +11,8 @@ import tests.tests.*;
         AlegeMasinaTest.class,
         ListaClaseAutovehiculeTest.class,
         UniversaleButtonTest.class,
-        AdaugaInCosSiValideazaPretTest.class,
-        ValidarePretLogatTest.class
+        ValidarePretCosNelogatTest.class,
+        ValidarePretCosLogatTest.class
 })
 
 public class TestSuite {

@@ -1,22 +1,14 @@
-package pages;
+package pages.onlyValidatePages;
 
-import help.ElementMethods;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import pages.BasePage;
 
-public class UniversalePage {
-        public WebDriver driver;
-//        public IndexPage indexPage;
-        public ElementMethods elementMethods;
-
-
+public class UniversalePage extends BasePage {
 
         public UniversalePage(WebDriver driver){
-                this.driver = driver;
-//                this.indexPage=new IndexPage(driver);
-                this.elementMethods= new ElementMethods(driver);
-                PageFactory.initElements(driver, this);
+                super(driver);
         }
+
 
         public void validateTitle(){
                 elementMethods.validateTitleElement("Autokarma - Catalog piese universale");

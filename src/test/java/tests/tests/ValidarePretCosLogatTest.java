@@ -10,7 +10,7 @@ import pages.IndexPage;
 import pages.UleiMotorPage;
 import pages.onlyValidatePages.UniversalePage;
 
-public class ValidarePretLogatTest extends Hooks {
+public class ValidarePretCosLogatTest extends Hooks {
     public IndexPage indexPage;
     public UleiMotorPage uleiMotorPage;
     public UniversalePage universalePage;

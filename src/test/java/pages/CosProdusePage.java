@@ -8,14 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.HashMap;
 
-public class CosProdusePage {
-    public WebDriver driver;
-    public ElementMethods elementMethods;
+public class CosProdusePage extends BasePage{
 
-    public CosProdusePage(WebDriver driver) {
-        this.driver = driver;
-        this.elementMethods = new ElementMethods(driver);
-        PageFactory.initElements(driver, this);
+    public CosProdusePage(WebDriver driver){
+        super(driver);
     }
 
     @FindBy (xpath = "//*[@id='totaluri']/div[2]/div/div[1]/div[2]")
@@ -31,9 +27,7 @@ public class CosProdusePage {
     @FindBy (css = "input[name='password']")
     private WebElement passwordElement;
 
-
-
-    public String getPretTotal() {
+    public String getPretTotalNelogat() {
         return pretTotalElement.getText();
     }
 

@@ -1,25 +1,17 @@
 package pages;
 
-import help.ElementMethods;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
-public class UleiMotorPage {
-    public WebDriver driver;
-    public IndexPage indexPage;
-    public ElementMethods elementMethods;
+public class UleiMotorPage extends BasePage{
 
-    public UleiMotorPage(WebDriver driver) {
-        this.driver = driver;
-        this.indexPage = new IndexPage(driver);
-        this.elementMethods = new ElementMethods(driver);
-        PageFactory.initElements(driver, this);
+    public UleiMotorPage(WebDriver driver){
+        super(driver);
     }
+
 
     @FindBy(xpath = "//div[@class='bf-sliding-cont']/div/div/div/span/input")
     private List<WebElement> filtreListUleiuriElement;
@@ -72,7 +64,8 @@ public class UleiMotorPage {
 
     public void clickAdaugaInCosButton() {
         elementMethods.clickElement(aplicaButton);
-        elementMethods.scrollByPixel(0,700);
+        elementMethods.wait(300);
+        elementMethods.scrollByPixel(0,900);
         elementMethods.clickElement(adaugaInCosElement);
         elementMethods.wait(300);
     }
@@ -83,8 +76,8 @@ public class UleiMotorPage {
     }
 
     public void clickVeziCosProduseElement () {
+        elementMethods.hoverElement(veziCosProduseElement);
         veziCosProduseElement.click();
-        elementMethods.wait(300);
         getVeziCosProduseElement2.click();
     }
 

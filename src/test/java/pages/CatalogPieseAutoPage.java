@@ -1,21 +1,14 @@
 package pages;
 
-import help.ElementMethods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
-public class CatalogPieseAutoPage {
-    public WebDriver driver;
-    public ElementMethods elementMethods;
+public class CatalogPieseAutoPage extends BasePage{
 
-    public CatalogPieseAutoPage(WebDriver driver) {
-        this.driver = driver;
-        this.elementMethods = new ElementMethods(driver);
-        PageFactory.initElements(driver, this);
+    public CatalogPieseAutoPage(WebDriver driver){
+        super(driver);
     }
 
     @FindBy(xpath = "//*[@id='input_carfilter_class_chosen']/div/div/input")

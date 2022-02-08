@@ -14,15 +14,12 @@ public class PropertyFile {
     public PropertyFile(String path){
         loadFile(path);
     }
+
 //    metoda care incarca
     public void loadFile(String path){
         properties = new Properties();
         try {
             fileInputStream= new FileInputStream("src/test/resources/" + path + ".properties");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
             properties.load(fileInputStream);
         } catch (IOException e) {
             e.printStackTrace();

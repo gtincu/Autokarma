@@ -1,17 +1,13 @@
 package pages.onlyValidatePages;
 
-import help.ElementMethods;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import pages.BasePage;
 
-public class PieseAgricolePage {
-    public WebDriver driver;
-    public ElementMethods elementMethods;
+public class PieseAgricolePage extends BasePage {
+
 
     public PieseAgricolePage(WebDriver driver){
-        this.driver = driver;
-        this.elementMethods = new ElementMethods(driver);
-        PageFactory.initElements(driver,this);
+        super(driver);
     }
 
     public void validateTitleAndGoBack(){

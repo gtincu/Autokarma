@@ -1,11 +1,10 @@
 package tests.tests;
 
 import base.Hooks;
-import base.SharedData;
 import com.aventstack.extentreports.Status;
 import help.ElementMethods;
 import org.junit.Test;
-import pages.UniversalePage;
+import pages.onlyValidatePages.UniversalePage;
 import pages.onlyValidatePages.AntigelPage;
 import pages.IndexPage;
 import pages.UleiMotorPage;
